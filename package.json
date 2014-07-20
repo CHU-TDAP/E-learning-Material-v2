@@ -1,0 +1,22 @@
+{
+  "name": "UElearning-Material",
+  "version": "2.0.0",
+  "description": "無所不在學習導引機制之研製-國立科學博物館教材",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CHU-TDAP/E-learning-Material-v2.git"
+  },
+  "author": "CHU-TDAP",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CHU-TDAP/E-learning-Material-v2/issues"
+  },
+  "homepage": "https://github.com/CHU-TDAP/E-learning-Material-v2",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
