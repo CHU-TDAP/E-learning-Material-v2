@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         connect: {
             server: {
                 options: {
-                    hostname: '*',
+                    hostname: 'localhost',
                     livereload: true
                 }
             }
