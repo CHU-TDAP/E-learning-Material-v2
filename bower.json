@@ -1,0 +1,23 @@
+{
+  "name": "UElearning-Material",
+  "version": "2.0.0",
+  "authors": [
+    "Yuan Chiu <chyuaner@gmail.com>"
+  ],
+  "description": "無所不在學習導引機制之研製-國立科學博物館教材",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "zurb/bower-foundation#~5.5.1"
+  }
+}

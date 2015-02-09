@@ -1,9 +1,24 @@
 module.exports = function(grunt) {
     grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+
+        sass: {
+          options: {
+            includePaths: ['bower_components/foundation/scss']
+          },
+          dist: {
+            options: {
+              outputStyle: 'compressed'
+            },
+            files: {
+              'css/app.css': 'scss/app.scss'
+            }
+          }
+        },
         watch: {
             livereload: {
-                files: ['*.html', '**/*.css'],
-                tasks: ['copy', 'ssi'],
+                files: ['*.html', 'scss/**/*.scss'],
+                tasks: ['sass'],
                 options: {
                     livereload: true
                 }
@@ -18,9 +33,10 @@ module.exports = function(grunt) {
             }
         }
     });
-    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 
-    grunt.registerTask('build', []);
+    grunt.registerTask('build', ['sass']);
     grunt.registerTask('default', ['build','connect', 'watch']);
 };
