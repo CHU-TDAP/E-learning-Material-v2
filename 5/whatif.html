@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>古代的兩棲類</title>
+        <link rel="stylesheet" href="../css/app.css" />
+        <script src="../vendor/modernizr/modernizr.js"></script>
+    </head>
+    <body>
+        <div id="page">
+            <header id="title-header">
+                <h1>古代的兩棲類</h1>
+            </header>
+
+            <article id="content">
+
+                <p>從水中登上陸地可能是脊椎動物演化的里程碑。然而，我們對於這一段的演化過程卻所知不多。幸好有關古代兩棲類的新發現才讓我們有進一步的瞭解。</p>
+
+                <section>
+                    <h2>樹蜥螈</h2>
+
+                    <figure>
+                        <img class="picture" src="images/B6.bmp" alt="樹蜥螈的重建模型(1)">
+                        <img class="picture" src="images/B6_1.JPG" alt="樹蜥螈的重建模型(2)">
+                        <figcaption class="picture-name">樹蜥螈的重建模型</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="picture" src="images/B5.JPG" alt="樹蜥螈的化石模型三億四千萬年前">
+                        <figcaption class="picture-name">樹蜥螈的化石模型三億四千萬年前</figcaption>
+                    </figure>
+
+                    <p>這是樹蜥螈的化石複製品，也是我們所知最完整最古老的陸生兩棲類的骨骼。再發現它之前，只從化石碎片中得知樹蜥螈的存在。其近親魚石蝝還是魚的模樣，而化石顯示樹蜥螈具有發育完全的四肢，已能適應陸地的生活。在沼澤森林形成之前，樹蜥螈是棲於溫泉旁邊的兩棲類之一。牠們以陸上的小無脊堆動物為食，例如蠍子、蜘蛛和蜈蚣等。</p>
+                    <p/>
+                </section>
+
+                <hr />
+
+                <section>
+                    <h2>西蒙螈</h2>
+
+                    <figure>
+                        <img class="picture" src="images/B7_1.JPG" alt="西蒙螈">
+                    </figure>
+
+                    <p>西蒙螈乃介於兩棲類與爬蟲類的一種動物。它兼具此兩種動物的特徵。兩棲類與爬蟲類主要的不同在於它門所產的卵，兩棲類必須把卵產在水中，爬蟲類則能產生有殼的卵。</p>
+                    <p>我們並沒有直接的證據告訴我們西蒙螈產的是哪一種卵，但有一種近似西蒙螈的幼體曾被發現，它們長相如蝌蚪並有鰓，因此很可能它們是在水中產卵。</p>
+
+                    <div class="question">
+                        <h3>西蒙螈是爬蟲類祖先嗎？</h3>
+                        <p>西蒙螈比最早的爬蟲類稍晚出現，所以不可能是爬蟲類的祖先。</p>
+                    </div>
+                </section>
+
+                <hr />
+
+                <section>
+                    <h2>盤蜥螈</h2>
+
+                    <figure>
+                        <img class="picture" src="images/B7.bmp" alt="樹蜥螈的化石模型三億四千萬年前">
+                        <figcaption class="fig">
+                                <div class="picture-name">盤蜥螈的化石</div>
+                                <div class="picture-info">距今兩億七千萬年前</div>
+                        </figcaption>
+                    </figure>
+
+                    <p>這具盤蜥螈化石已有二億七千萬年之久，它屬於後來演化成爬蟲類的古老兩棲類之一。它與較大的西蠓螈是近親。</p>
+                </section>
+
+            </article>
+
+            <footer>
+                <a id="btn-finish" class="button" href="question.html">看完了！</a>
+            </footer>
+        </div>
+
+        <script src="../vendor/jquery/dist/jquery.min.js"></script>
+        <script src="../vendor/foundation/js/foundation.min.js"></script>
+        <script src="../js/app.js"></script>
+
+        <script>
+            var data = {
+                minTime: 30,
+                minTimeForce: true
+            };
+
+            var layout_data = {
+                finishButton: document.getElementById("btn-finish")
+            }
+
+            uelearning = new UElearning.View(data, layout_data);
+            uelearning.startAndroid();
+        </script>
+    </body>
+</html>
