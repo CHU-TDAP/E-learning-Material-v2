@@ -13,6 +13,7 @@ root ─┬─ assets (外部函式庫資源)
       ├─ 1 (標的內部編號)
       │  ├─ images (教材內容圖片)
       │  │  └─ ...... 
+      │  ├─ index.html (主要教材)
       │  ├─ what.html (其中一組教材)
       │  └─ question.html (小測驗)
       ├─ ...... 
@@ -30,13 +31,32 @@ root ─┬─ assets (外部函式庫資源)
 * 在這個標的導覽完以前，會出個小問題考考。
 * 配合導覽系統使用: 會通知App相關訊息（作答內容、回答完成...）
 
-## 開始維護
+## 使用此教材
+請直接從[Release]下載整份壓縮檔後即可
+
+## 開發/維護此教材
 ### 1. 安裝Node.JS
 #### Mac OSX
     brew install node
-    
-#### 2. 安裝相關套件
-    npm install
+
+### 2. 安裝相關套件
+
+    [sudo] npm install -g grunt-cli
+    [sudo] npm install -g bower
+    npm install && bower install
+
+### 3. 啟動自動化工具
+
+    grunt
+
+啟動後會監視專案內的`.html`,`.css`檔案，一有任何變動將會
+
+* livereload: 呼叫瀏覽器自動重新整理
+
+#### 瀏覽器plugin安裝
+[LiveReload - browser extensions](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-)
+
+支援主流瀏覽器: Firefox, Chrome, Safari
 
 ## 規格
 ### 一個標的為一個資料夾
@@ -45,9 +65,5 @@ root ─┬─ assets (外部函式庫資源)
 * 多組教材網頁要設連結到`question.html`來作隨堂測驗小考。
 
 ### 配合導覽系統使用
-* 為了做到獨立運作，不內建
-    * 計時功能
-    * 紀錄回答狀況功能
-* 上述提到的功能，改由App應用程式來實現
+* 為了做到獨立運作，不內建紀錄回答狀況功能，將改由App應用程式來實現
     * 僅提供與App溝通用的API（用JavaScript呼叫）
-
