@@ -1,0 +1,41 @@
+body {
+    height: auto;
+}
+
+#page {
+    @include grid-row();
+
+    @media #{$small-up} {
+        width: 95%;
+    }
+    @media #{$large-up} {
+        width: 100%;
+    }
+}
+
+header {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+figure{
+    @include grid-row();
+}
+
+figure img {
+    @include grid-column(6);
+    max-height: 25em;
+    width: auto;
+}
+
+figure .picture-name {
+    @include grid-column(12);
+}
+
+figure .picture-info {
+    @include grid-column(12);
+}
+
+footer {
+    text-align: center;
+}
