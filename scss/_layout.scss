@@ -39,3 +39,10 @@ figure .picture-info {
 footer {
     text-align: center;
 }
+
+.question-hide .answer {
+    display: none;
+}
+.question-hide .answer.show {
+    display: inherit;
+}
