@@ -56,7 +56,7 @@ h2::before {
     margin-right: 0.2em;
 }
 
-.question h3 {
+.question h3, .question-hide h3 {
     font-family: 微軟正黑體;
     color: #c71585;
     font-weight: bold;
@@ -69,7 +69,7 @@ h2::before {
     }
 }
 
-.question h3::before {
+.question h3::before, .question-hide h3::before {
     content: url('../images/item/q.gif');
     margin-right: 0.5em;
 }
