@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>岩石中的紀錄</title>
+        <link rel="stylesheet" href="../css/app.css" />
+        <script src="../vendor/modernizr/modernizr.js"></script>
+    </head>
+    <body>
+        <div id="page">
+            <header id="title-header">
+                <h1>岩石中的紀錄</h1>
+            </header>
+
+            <article id="content">
+
+                
+
+                <section>
+                    <h2>岩石中的紀錄</h2>
+					<p>岩石中的化石顯示了地球上的生命史，這部生命史是以一種有秩序的方式逐一訴說的 - 越深層的化石越古老(在岩層未受干擾的情況下)</p>
+                    <figure>
+                        <img class="picture" src="images/I1.JPG" alt="岩石中的紀錄">
+                        <figcaption class="picture-name">岩石中的紀錄</figcaption>
+                    </figure>
+                </section>
+
+                <hr />
+                    
+					<h2>化石的形成</h2>		
+					<p>化石形成的兩大要件</p>
+					<p>1.生物具有硬殼: 生物死亡後, 肉體容易被其他生物分解, 而硬殼或體骼較不易受破壞</p>
+					<p>2.死亡後迅速掩埋: 硬殼或骨骼仍受化學作用和物理營力破壞的可能, 所以死亡後, 要馬上用泥質一類的沉積物將它掩蓋保護起來</p>
+                <section>
+
+                    <figure>
+                        <img class="picture" src="images/I2.GIF" alt="化石形成">
+						<figcaption class="picture-name">動物死去並沉到湖底。</figcaption>
+                    </figure>
+					
+                    <figure>
+                        <img class="picture" src="images/I3.GIF" alt="化石形成">
+						<figcaption class="picture-name">遺體被細沙和泥層所覆蓋著。</figcaption>
+                    </figure>
+					
+                    <figure>
+                        <img class="picture" src="images/I4.gif" alt="化石形成">
+						<figcaption class="picture-name">當沉積物被壓成堅硬的岩石時，礦物取代了骨骼的本質。</figcaption>
+                    </figure>
+					
+                    <figure>
+                        <img class="picture" src="images/I5.GIF" alt="化石形成">
+						<figcaption class="picture-name">此時岩石露出水面，風化作用使化石裸露了出來。</figcaption>
+                    </figure>
+					
+					
+            </article>
+
+            <footer>
+                <a id="btn-finish" class="button" href="question.html">學習完成</a>
+            </footer>
+        </div>
+
+        <script src="../vendor/jquery/dist/jquery.min.js"></script>
+        <script src="../vendor/foundation/js/foundation.min.js"></script>
+        <script src="../js/app.js"></script>
+
+        <script>
+            var data = {
+                minTime: 30,
+                minTimeForce: true
+            };
+
+            var layout_data = {
+                finishButton: document.getElementById("btn-finish")
+            }
+
+            uelearning = new UElearning.View(data, layout_data);
+            uelearning.startAndroid();
+        </script>
+    </body>
+</html>
