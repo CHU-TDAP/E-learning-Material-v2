@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>沙漠植物</title>
+        <link rel="stylesheet" href="../css/app.css" />
+        <script src="../vendor/modernizr/modernizr.js"></script>
+    </head>
+    <body>
+        <div id="page">
+            <header id="title-header">
+                <h1>沙漠植物</h1>
+            </header>
+
+            <article id="content">
+
+                <p>只有兩類植物能在經年酷熱、水分缺乏的乾燥沙漠中生存。</p>
+
+                <section>
+                    <h2>逃避乾旱的植物</h2>
+                    <p>這些植物的生活史甚短，且在雨後快速繁殖。此時沙漠中百花怒放，呈現難得的景象</p>
+                    <figure>
+                        <img class="picture" src="images/I1.JPG" alt="地錢">
+                    </figure>
+                </section>
+
+                <section>
+                    <h2>抵抗乾旱的植物</h2>
+                    <p>這些植物多能在多汁的莖葉中儲藏水分已在乾旱中存活，他們稱為肉質植物，最早出現於一億年前</p>
+                    <figure>
+                        <img class="picture" src="images/I1.JPG" alt="絲蘭">
+                        <img class="picture" src="images/I2.JPG" alt="沙漠玫瑰">
+                    </figure>
+                </section>
+
+                <section>
+                    <h2>鱗毛蕨(Dryopteris)－蕨類</h2>
+
+                    <figure>
+                        <img class="picture" src="images/I3.JPG" alt="鱗毛蕨">
+                    </figure>
+
+                    <p>蕨類是非常古老的植物，他們有莖和葉，並有維管束組織來運輸水分與養分。葉背上鐵銹色結構是用來生產並保護孢子的。</p>
+                </section>
+
+                <section>
+                    <h2>木賊(Equisetum)－石松(Lycopodium)</h2>
+
+                    <figure>
+                        <img class="picture" src="images/I4.JPG" alt="木賊">
+						<div class="picture-name">現生種類不多，但在三億年前，這群築物的分佈很廣，毬果狀構造內有孢子。</div>
+						<img class="picture" src="images/I5.JPG" alt="石松">
+						<div class="picture-name">分布於熱帶至極帶。如同木賊，她的孢子包在直立的毬果中。</div>
+                    </figure>
+                    <p>如同蕨類，這兩群植物亦很古老。現生者大多很小，但在古代，他們長得非常高大，可達45公尺。</p>
+                </section>
+			<hr />
+
+			<h2>植物的繁殖</h2>
+
+			<p>絕大部分的植物有很複雜的生活史，在生活始終，產生孢子的時期(孢子體)和產生配子的時期互相交替。</p>
+			<section>
+                    <h2>苔類的生活史</h2>
+
+                    <figure>
+                        <img class="picture" src="images/I6.JPG" alt="苔類生活史">
+                    </figure>
+
+                    <p>配子體：此期內，配子體產生之雄配子和雌配子接合後萌發另一新的植物。</p>
+                <p>孢子體：此期內孢子體產生孢子，並分散各地兒萌長為下一代的植物。下一代的植物產生配子，完成生活史。</p>
+            </section>
+
+            <section>
+                    <h2>蕨類的生活史</h2>
+
+                    <figure>
+                        <img class="picture" src="images/I7.JPG" alt="蕨類生活史">
+                    </figure>
+                    <p>蕨類生活史上的兩個世代是相當容易區分的，配子體呈板狀而小，酷似蘚類。</p>
+            </section>
+
+            </article>
+
+            <footer>
+                <a id="btn-finish" class="button" href="question.html">學習完成</a>
+            </footer>
+        </div>
+
+        <script src="../vendor/jquery/dist/jquery.min.js"></script>
+        <script src="../vendor/foundation/js/foundation.min.js"></script>
+        <script src="../js/app.js"></script>
+
+        <script>
+            var data = {
+                minTime: 30,
+                minTimeForce: true
+            };
+
+            var layout_data = {
+                finishButton: document.getElementById("btn-finish")
+            }
+
+            uelearning = new UElearning.View(data, layout_data);
+            uelearning.startAndroid();
+        </script>
+    </body>
+</html>
