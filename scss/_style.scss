@@ -87,6 +87,14 @@ hr {
     border: inset 3px #b38300;
 }
 
+#btn-finish {
+    @extend .button;
+}
+#btn-finish.disable {
+    @extend .button;
+    @extend .disabled;
+}
+
 .btn-show-answer {
     @extend .button;
 }
