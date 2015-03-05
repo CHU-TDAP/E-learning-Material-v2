@@ -86,3 +86,7 @@ figure .picture-name {
 hr {
     border: inset 3px #b38300;
 }
+
+.btn-show-answer {
+    @extend .button;
+}
