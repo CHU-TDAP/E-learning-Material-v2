@@ -98,3 +98,17 @@ hr {
 .btn-show-answer {
     @extend .button;
 }
+
+section.question .answer-area ul {
+    text-align: center;
+
+    li {
+        list-style-type: none;
+
+        .option-button {
+            @extend .button;
+            @extend .round;
+            font-size: 1.5em;
+        }
+    }
+}

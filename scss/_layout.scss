@@ -46,3 +46,13 @@ footer {
 .question-hide .answer.show {
     display: inherit;
 }
+
+section.question {
+
+}
+section.question.hide {
+    display: none;
+}
+section.question .answer-area {
+    margin-top: 2rem;
+}

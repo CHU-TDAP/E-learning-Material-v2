@@ -91,7 +91,6 @@
 
         <script src="../vendor/jquery/dist/jquery.min.js"></script>
         <script src="../vendor/foundation/js/foundation.min.js"></script>
-        <script src="../js/UElearning.js"></script>
         <script src="../js/app.js"></script>
         <script src="../js/UElearning.js"></script>
 
@@ -101,13 +100,13 @@
                 maxTimeForce: false,
             };
 
-            var layout_id_data = {
-                question_section: "question",
-                answer_option: "option-button"
+            var layout_data = {
+                question_section: document.getElementsByClassName("question"),
+                answer_option: document.getElementsByClassName("option-button")
             }
 
-            uelearning = new UElearning.Question(data);
-            uelearning.startAndroid();
+            uelearning = new UElearning.Question(data, layout_data);
+            uelearning.start();
         </script>
     </body>
 </html>
