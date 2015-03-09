@@ -8,11 +8,14 @@ var UElearning = {
         this.minTimeForce = data.minTimeForce;
         this.isEnableFinish = function() {
             return isEnableFinish;
-        }
+        };
+        var isAndroid = false;
+
+        // --------------------------------------------------------------------
 
         this.alertInfo = function() {
-            alert('minTime: '+this.minTime+'\n'+
-                  'minTimeForce: '+this.minTimeForce);
+            alert('minTime: ' + this.minTime + '\n' +
+                  'minTimeForce: ' + this.minTimeForce);
         };
 
         this.start = function() {
@@ -52,16 +55,128 @@ var UElearning = {
                     finishButton.text = finishButtonText;
                 }
             }
-        };
 
-        this.startAndroid = function() {
-            this.start();
-            var finishButton = this.finishButton;
             finishButton.onclick = function() {
                 if(isEnableFinish) {
-                    Android.pressFinishButton();
+                    if(isAndroid) {
+                        Android.pressFinishButton();
+                    }
                 }
             }
+        };
+
+        this.setAndroid = function() {
+            isAndroid = true;
+        }
+    },
+
+    // ========================================================================
+
+    Question: function(data, layout_data) {
+        this.maxTime = data.maxTime;
+        this.maxTimeForce = data.maxTimeForce;
+
+        this.question_section = layout_data.question_section;
+        this.answer_option = layout_data.answer_option;
+
+        var topicId = 0;
+        var maxTopicTotal = this.question_section.length;
+        var isAndroid = false;
+
+        // --------------------------------------------------------------------
+
+        this.alertInfo = function() {
+            alert('maxTime: '+this.maxTime+'\n'+
+                  'maxTimeForce: '+this.maxTimeForce+'\n'+
+                  'maxTopicTotal: '+maxTopicTotal+'\n'+
+                  'topicId: '+topicId);
+        };
+
+        this.toTopic = function() {
+
+            // 隨機抽一個題目
+            topicId = Math.floor((Math.random() * maxTopicTotal) + 1);
+            this.toTopicById(topicId);
+        };
+
+        this.toTopicById = function(id) {
+            topicId = id;
+
+            var question_section = this.question_section;
+            for (var i = 0; i < maxTopicTotal; i++) {
+
+                // 若是當前題目
+                if(i+1 == topicId) {
+                    if(question_section[i].classList.contains('hide')) {
+                        question_section[i].classList.remove('hide');
+                    }
+                }
+                else {
+                    if(!question_section[i].classList.contains('hide')) {
+                        question_section[i].classList.add('hide');
+                    }
+                }
+            }
+        };
+
+        this.defineButton = function() {
+            var question_section = this.question_section;
+
+            var option_button = $(question_section[topicId-1])
+                .find('.answer-area .option-button');
+
+            option_button.click(function() {
+                // 取得按鈕所在索引
+                var atIndex = $(option_button).index(this)+1;
+
+                // 判斷選擇的答案是否正確
+                if(this.dataset.is_corrent == 'true') {
+                    $('#correctModal').foundation('reveal', 'open');
+                    if(isAndroid) {
+                        Android.answerCorrect(topicId, atIndex);
+                    }
+                }
+                else {
+                    $('#errorModal').foundation('reveal', 'open');
+                    if(isAndroid) {
+                        Android.answerError(topicId, atIndex);
+                    }
+                }
+
+            });
+        };
+
+        this.createDialog = function() {
+            var correctDialog = '<div id="correctModal" class="reveal-modal" data-reveal><h2>回答正確！</h2><p>恭喜你回答正確</p><a href="#" id="correctModal-okbtn" class="button success">繼續學習</a></div>';
+            var errorDialog = '<div id="errorModal" class="reveal-modal" data-reveal><h2>回答錯誤！</h2><p>再回去看一次吧！</p><a href="#" id="errorModal-okbtn" class="button">回去重新看看</a></div>';
+            $("body").append(correctDialog);
+            $("body").append(errorDialog);
+
+            $("#correctModal-okbtn").click(function() {
+                if(isAndroid) {
+                    Android.learnFinish();
+                }
+                else {
+                    window.location.href = '../index.html';
+                }
+            });
+
+            $("#errorModal-okbtn").click(function() {
+                if(isAndroid) {
+                    Android.goBack();
+                }
+                window.history.go(-2);
+            });
+        };
+
+        this.start = function() {
+            this.toTopic();
+            this.defineButton();
+            this.createDialog();
+        };
+
+        this.setAndroid = function() {
+            isAndroid = true;
         };
     }
 };
