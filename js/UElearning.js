@@ -45,6 +45,7 @@ var UElearning = {
                         finishButton.href = '#';
                     }
                     finishButton.text = finishButtonText + ' ('+ remainderHold +')';
+
                 }
                 else {
                     isEnableFinish = true;
@@ -164,8 +165,12 @@ var UElearning = {
             $("#errorModal-okbtn").click(function() {
                 if(isAndroid) {
                     Android.goBack();
+                    var historyTotal = history.length;
+                    history.go(-historyTotal+1);
                 }
-                window.history.go(-2);
+                else {
+                    window.history.go(-2);
+                }
             });
         };
 
