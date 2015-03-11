@@ -148,8 +148,8 @@ var UElearning = {
         };
 
         this.createDialog = function() {
-            var correctDialog = '<div id="correctModal" class="reveal-modal" data-reveal><h2>回答正確！</h2><p>恭喜你回答正確</p><a href="#" id="correctModal-okbtn" class="button success">繼續學習</a></div>';
-            var errorDialog = '<div id="errorModal" class="reveal-modal" data-reveal><h2>回答錯誤！</h2><p>再回去看一次吧！</p><a href="#" id="errorModal-okbtn" class="button">回去重新看看</a></div>';
+            var correctDialog = '<div id="correctModal" class="reveal-modal" data-reveal data-options="close_on_background_click: false;"><h2>回答正確！</h2><p>恭喜你回答正確</p><a href="#" id="correctModal-okbtn" class="button success">繼續學習</a></div>';
+            var errorDialog = '<div id="errorModal" class="reveal-modal" data-reveal data-options="close_on_background_click: false;"><h2>回答錯誤！</h2><p>再回去看一次吧！</p><a href="#" id="errorModal-okbtn" class="button">回去重新看看</a></div>';
             $("body").append(correctDialog);
             $("body").append(errorDialog);
 
