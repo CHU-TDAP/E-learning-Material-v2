@@ -60,7 +60,7 @@ var UElearning = {
             finishButton.onclick = function() {
                 if(isEnableFinish) {
                     if(isAndroid) {
-                        Android.pressFinishButton();
+                        Android.pressFinishButton();//按下學習完成
                     }
                 }
             }
