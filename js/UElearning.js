@@ -10,6 +10,9 @@ var UElearning = {
             return isEnableFinish;
         };
         var isAndroid = false;
+        this.isAndroid = function() {
+            return isAndroid;
+        };
 
         // --------------------------------------------------------------------
 
