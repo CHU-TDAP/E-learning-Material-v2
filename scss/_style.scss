@@ -77,8 +77,24 @@ strong.other {
     color: red;
 }
 
-figure .picture-name {
-    color: #0000FF;
+figure{
+    margin: 20px 0;
+    text-align: center;
+    img {
+        margin: 0 auto;
+        display: block;
+        float: inherit;
+    }
+    .picture-name {
+        font-family: 微軟正黑體;
+        font-weight: bold;
+        color: #0000FF;
+    }
+    .picture-info {
+        font-family: 微軟正黑體;
+        font-weight: bold;
+        color: black;
+    }
 }
 
 hr {
