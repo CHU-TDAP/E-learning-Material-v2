@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>古代的兩棲類</title>
+        <link rel="stylesheet" href="../css/app.css" />
+        <script src="../vendor/modernizr/modernizr.js"></script>
+    </head>
+    <body>
+        <div id="page">
+            <header id="title-header">
+                <h1>古代的兩棲類</h1>
+            </header>
+
+            <article id="content">
+
+                <section class="question">
+                    <h2 class="question-title">恐龍屬於哪一類群動物？</h2>
+
+                    <div class="answer-area">
+                        <ul>
+                            <li><a class="option-button" href="#">無弓動物類群</a></li>
+                            <li><a class="option-button" href="#">單弓動物類群</a></li>
+                            <li><a class="option-button" href="#">上弓動物類群</a></li>
+                            <li><a class="option-button" data-is_corrent="true" href="#">雙弓動物類群</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="question">
+                    <h2 class="question-title">恐龍主要的演化特徵均與什麼有關？</h2>
+
+                    <div class="answer-area">
+                        <ul>
+                            <li><a class="option-button" href="#">環境</a></li>
+                            <li><a class="option-button" data-is_corrent="true" href="#">行動</a></li>
+                            <li><a class="option-button" href="#">飲食習慣</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="question">
+                    <h2 class="question-title">恐龍屬於雙弓爬行羊膜群裡的哪一類動物？</h2>
+
+                    <div class="answer-area">
+                        <ul>
+                            <li><a class="option-button" data-is_corrent="true" href="#">祖龍類</a></li>
+                            <li><a class="option-button" href="#">翼龍類</a></li>
+                            <li><a class="option-button" href="#">恐龍類</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="question">
+                    <h2 class="question-title">陸塊的漂移是什麼時候開始的？</h2>
+
+                    <div class="answer-area">
+                        <ul>
+                            <li><a class="option-button" href="#">三疊紀</a></li>
+                            <li><a class="option-button" href="#">侏儸紀</a></li>
+                            <li><a class="option-button" data-is_corrent="true" href="#">白堊紀</a></li>
+                            <li><a class="option-button" href="#">二疊紀</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="question">
+                    <h2 class="question-title">侏儸紀看得到暴龍嗎？</h2>
+
+                    <div class="answer-area">
+                        <ul>
+                            <li><a class="option-button" href="#">看得到</a></li>
+                            <li><a class="option-button" data-is_corrent="true" href="#">看不到</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="question">
+                    <h2 class="question-title">白堊紀的主要大型肉食性恐龍為？</h2>
+
+                    <div class="answer-area">
+                        <ul>
+                            <li><a class="option-button" data-is_corrent="true" href="#">暴龍</a></li>
+                            <li><a class="option-button" href="#">異特龍</a></li>
+                            <li><a class="option-button" href="#">恐爪龍</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+            </article>
+
+        </div>
+
+        <script src="../vendor/jquery/dist/jquery.min.js"></script>
+        <script src="../vendor/foundation/js/foundation.min.js"></script>
+        <script src="../js/app.js"></script>
+        <script src="../js/UElearning.js"></script>
+
+        <script>
+            var data = {
+                maxTime: 60,
+                maxTimeForce: false,
+            };
+
+            var layout_data = {
+                question_section: document.getElementsByClassName("question"),
+                answer_option: document.getElementsByClassName("option-button")
+            }
+
+            uelearning = new UElearning.Question(data, layout_data);
+            uelearning.start();
+        </script>
+    </body>
+</html>

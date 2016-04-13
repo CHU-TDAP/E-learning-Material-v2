@@ -1,5 +1,6 @@
 var UElearning = {
     View: function(data, layout_data) {
+        var debug = false;
         var isEnableFinish = true;
 
         this.finishButton = layout_data.finishButton;
@@ -40,7 +41,7 @@ var UElearning = {
                 remainderHold = minTime - elapsedTime;
 
                 if(remainderHold > 0) {
-                    if(minTimeForce) {
+                    if(minTimeForce && !debug) {
                         isEnableFinish = false;
                         if(!finishButton.classList.contains('disable')) {
                             finishButton.classList.add('disable');

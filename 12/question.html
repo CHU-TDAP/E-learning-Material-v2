@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>竊蛋龍</title>
+        <link rel="stylesheet" href="../css/app.css" />
+        <script src="../vendor/modernizr/modernizr.js"></script>
+    </head>
+    <body>
+        <div id="page">
+            <header id="title-header">
+                <h1>竊蛋龍</h1>
+            </header>
+
+            <article id="content">
+
+                <section class="question">
+                    <h2 class="question-title">竊蛋龍最明顯的特徵是什麼，而且頭上還有一高聳的骨質頭冠，非常的突出？</h2>
+
+                    <div class="answer-area">
+                        <ul>
+                            <li><a class="option-button" href="#">脖子長</a></li>
+                            <li><a class="option-button" data-is_corrent="true" href="#">頭部短</a></li>
+                            <li><a class="option-button" href="#">腿部長</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="question">
+                    <h2 class="question-title">竊蛋龍主要分佈在蒙古的戈壁沙漠，生活年代為？</h2>
+
+                    <div class="answer-area">
+                        <ul>
+                            <li><a class="option-button" href="#">三疊紀晚期</a></li>
+                            <li><a class="option-button" data-is_corrent="true" href="#">白堊紀晚期</a></li>
+                            <li><a class="option-button" href="#">侏儸紀晚期</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="question">
+                    <h2 class="question-title">竊蛋龍屬於哪一類恐龍且是一種善於奔跑的二足小型恐龍？</h2>
+
+                    <div class="answer-area">
+                        <ul>
+                            <li><a class="option-button" data-is_corrent="true" href="#">腔尾龍類</a></li>
+                            <li><a class="option-button" href="#">稜齒龍類</a></li>
+                            <li><a class="option-button" href="#">堅尾龍類</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="question">
+                    <h2 class="question-title">竊蛋龍的嘴喙沒有牙齒，而由喙及哪一部位取而代之？</h2>
+
+                    <div class="answer-area">
+                        <ul>
+                            <li><a class="option-button" href="#">肌肉</a></li>
+                            <li><a class="option-button" href="#">上顎</a></li>
+                            <li><a class="option-button" data-is_corrent="true" href="#">下顎</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="question">
+                    <h2 class="question-title">竊蛋龍生活的年代為白堊紀晚期，主要分布於？</h2>
+
+                    <div class="answer-area">
+                        <ul>
+                            <li><a class="option-button" href="#">非洲撒哈拉沙漠</a></li>
+                            <li><a class="option-button" href="#">北美西部沙漠</a></li>
+                            <li><a class="option-button" data-is_corrent="true" href="#">蒙古戈壁沙漠</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+            </article>
+
+        </div>
+
+        <script src="../vendor/jquery/dist/jquery.min.js"></script>
+        <script src="../vendor/foundation/js/foundation.min.js"></script>
+        <script src="../js/app.js"></script>
+        <script src="../js/UElearning.js"></script>
+
+        <script>
+            var data = {
+                maxTime: 60,
+                maxTimeForce: false,
+            };
+
+            var layout_data = {
+                question_section: document.getElementsByClassName("question"),
+                answer_option: document.getElementsByClassName("option-button")
+            }
+
+            uelearning = new UElearning.Question(data, layout_data);
+            uelearning.start();
+        </script>
+    </body>
+</html>
