@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>探討人類的過去</title>
+        <link rel="stylesheet" href="../css/app.css" />
+        <script src="../vendor/modernizr/modernizr.js"></script>
+    </head>
+    <body>
+        <div id="page">
+            <header id="title-header">
+                <h1>探討人類的過去</h1>
+            </header>
+
+            <article id="content">
+
+                <section class="question">
+                    <h2 class="question-title">人類最早的工具相當粗糙，後來人類學會更好的方法將材料加工始之能為更有用的工具。複製古代的工具時可以得知哪些資訊呢？</h2>
+
+                    <div class="answer-area">
+                        <ul>
+                            <li><a class="option-button" href="#">花費的時間</a></li>
+                            <li><a class="option-button" href="#">製作的技巧</a></li>
+                            <li><a class="option-button" href="#">工具的效能</a></li>
+                            <li><a class="option-button" data-is_corrent="true" href="#">以上皆是</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="question">
+                    <h2 class="question-title">截至目前為止，專家們還是無法從考古遺址出土的動物遺骨來鑑定是野生的還是畜養的。</h2>
+
+                    <div class="answer-area">
+                        <ul>
+                            <li><a class="option-button" href="#">正確</a></li>
+                            <li><a class="option-button" data-is_corrent="true" href="#">不正確</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="question">
+                    <h2 class="question-title">我們可以從古代的壁畫了解人類具有與動物界相關連的信仰。</h2>
+
+                    <div class="answer-area">
+                        <ul>
+                            <li><a class="option-button" data-is_corrent="true" href="#">正確</a></li>
+                            <li><a class="option-button" href="#">不正確</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="question">
+                    <h2 class="question-title">從動物遺骸可以了解過去的？</h2>
+
+                    <div class="answer-area">
+                        <ul>
+                            <li><a class="option-button" href="#">氣候</a></li>
+                            <li><a class="option-button" href="#">食物來源</a></li>
+                            <li><a class="option-button" data-is_corrent="true" href="#">以上皆是</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+            </article>
+
+        </div>
+
+        <script src="../vendor/jquery/dist/jquery.min.js"></script>
+        <script src="../vendor/foundation/js/foundation.min.js"></script>
+        <script src="../js/app.js"></script>
+        <script src="../js/UElearning.js"></script>
+
+        <script>
+            var data = {
+                maxTime: 60,
+                maxTimeForce: false,
+            };
+
+            var layout_data = {
+                question_section: document.getElementsByClassName("question"),
+                answer_option: document.getElementsByClassName("option-button")
+            }
+
+            uelearning = new UElearning.Question(data, layout_data);
+            uelearning.start();
+        </script>
+    </body>
+</html>
