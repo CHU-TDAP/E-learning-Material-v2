@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>巨龍的腳印</title>
+        <link rel="stylesheet" href="../css/app.css" />
+        <script src="../vendor/modernizr/modernizr.js"></script>
+    </head>
+    <body>
+        <div id="page">
+            <header id="title-header">
+                <h1>巨龍的腳印</h1>
+            </header>
+。
+            <article id="content">
+
+                <section>
+                    <figure>
+                        <img class="picture" src="images/C10.bmp" alt="C10">
+					</figure>
+
+                    <p><strong class="other">腳印</strong>是恐龍留下的遺跡也是化石。在一億八千萬年前的澳洲，一隻腳步蹣跚的巨角龍行徑泥地，
+                       留下了這個珍貴的痕跡，並且透過腳印的面積和深度，
+                       可使我們了解到巨腳龍的體型與體重等相關資料，間接也証明了巨腳龍的存在。
+                       (這一類由生物遺跡形成的化石，叫生痕化石。)
+                    </p>
+					<p>古生物學家想要了解已經滅絕的古生物，
+					   就必須從每一個化石標本去尋找可以還原史前世界的蛛絲馬跡，
+					   例如從恐龍的腳印化石，可以推斷出牠的腳部結構、行走姿勢，
+					   甚至體重等訊息;從牙齒的形狀和磨損的情形，可以判斷牠們的食性;
+					   至於恐龍蛋及排泄物化石，則可以幫助我們了解恐龍的生殖方式及食物。
+                    </p>
+					<p>因此，每一個恐龍的實體化石及生痕化石發現，
+					   都能提供一點一滴的訊息已逐步增進我們對恐龍的認識，
+					   進而建構起恐龍的原貌和其生存的世界，證據越多，
+                        就能更接近恐龍世界的真相。
+                    </p>
+
+                    <figure>
+                        <img class="picture" src="images/C8.bmp" alt="C9">
+                    </figure>
+                </section>
+
+            </article>
+
+            <footer>
+                <a id="btn-finish" class="button" href="question.html">學習完成</a>
+            </footer>
+        </div>
+
+        <script src="../vendor/jquery/dist/jquery.min.js"></script>
+        <script src="../vendor/foundation/js/foundation.min.js"></script>
+        <script src="../js/UElearning.js"></script>
+        <script src="../js/app.js"></script>
+        <script src="../js/UElearning.js"></script>
+
+        <script>
+            var data = {
+                minTime: 30,
+                minTimeForce: true
+            };
+
+            var layout_data = {
+                finishButton: document.getElementById("btn-finish")
+            }
+
+            uelearning = new UElearning.View(data, layout_data);
+            uelearning.start();
+        </script>
+    </body>
+</html>

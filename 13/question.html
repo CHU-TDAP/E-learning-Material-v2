@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>巨龍的腳印</title>
+        <link rel="stylesheet" href="../css/app.css" />
+        <script src="../vendor/modernizr/modernizr.js"></script>
+    </head>
+    <body>
+        <div id="page">
+            <header id="title-header">
+                <h1>巨龍的腳印</h1>
+            </header>
+
+            <article id="content">
+
+                <section class="question">
+                    <h2 class="question-title">腳印是恐龍留下的遺跡，所以是化石。這一類由生物遺跡形成的化石又稱為什麼化石？</h2>
+
+                    <div class="answer-area">
+                        <ul>
+                            <li><a class="option-button" href="#">活化石</a></li>
+                            <li><a class="option-button" data-is_corrent="true" href="#">痕化石</a></li>
+                            <li><a class="option-button" href="#">印痕石</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="question">
+                    <h2 class="question-title">透過腳印的什麼，可使我們了解到巨腳龍的體型與體重等相關資料，間接也証明了巨腳龍的存在？</h2>
+
+                    <div class="answer-area">
+                        <ul>
+                            <li><a class="option-button" href="#">面積</a></li>
+                            <li><a class="option-button" href="#">深度</a></li>
+                            <li><a class="option-button" data-is_corrent="true" href="#">以上皆是</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="question">
+                    <h2 class="question-title">我們可以透過腳印的面積和深度，了解巨腳龍的哪些相關資料？</h2>
+
+                    <div class="answer-area">
+                        <ul>
+                            <li><a class="option-button" data-is_corrent="true" href="#">體重</a></li>
+                            <li><a class="option-button" href="#">飲食</a></li>
+                            <li><a class="option-button" href="#">膚色</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="question">
+                    <h2 class="question-title">從恐龍軀體化石中，我們可以知道什麼？</h2>
+
+                    <div class="answer-area">
+                        <ul>
+                            <li><a class="option-button" href="#">恐龍的重量</a></li>
+                            <li><a class="option-button" href="#">體型</a></li>
+                            <li><a class="option-button" data-is_corrent="true" href="#">以上皆是</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="question">
+                    <h2 class="question-title">從恐龍軀體化石中，我們無法知道什麼？</h2>
+
+                    <div class="answer-area">
+                        <ul>
+                            <li><a class="option-button" href="#">恐龍的重量</a></li>
+                            <li><a class="option-button" href="#">體型</a></li>
+                            <li><a class="option-button" href="#">肉食或草食</a></li>
+                            <li><a class="option-button" data-is_corrent="true" href="#">皮膚顏色</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+            </article>
+
+        </div>
+
+        <script src="../vendor/jquery/dist/jquery.min.js"></script>
+        <script src="../vendor/foundation/js/foundation.min.js"></script>
+        <script src="../js/app.js"></script>
+        <script src="../js/UElearning.js"></script>
+
+        <script>
+            var data = {
+                maxTime: 60,
+                maxTimeForce: false,
+            };
+
+            var layout_data = {
+                question_section: document.getElementsByClassName("question"),
+                answer_option: document.getElementsByClassName("option-button")
+            }
+
+            uelearning = new UElearning.Question(data, layout_data);
+            uelearning.start();
+        </script>
+    </body>
+</html>
