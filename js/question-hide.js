@@ -12,4 +12,7 @@ $( ".btn-show-answer" ).click(function() {
     if(uelearning.isAndroid()) {
         console.info('Android!!!');
     }
+
+    // 防止按下按鈕後改變卷軸
+    return false;
 });
